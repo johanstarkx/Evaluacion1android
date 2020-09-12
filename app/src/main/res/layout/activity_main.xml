@@ -10,7 +10,7 @@
         android:id="@+id/fMonto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="24dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
@@ -23,19 +23,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="115dp" />
+        app:layout_constraintGuide_begin="76dp" />
 
     <TextView
         android:id="@+id/Confirm"
-        android:layout_width="166dp"
-        android:layout_height="51dp"
+        android:layout_width="258dp"
+        android:layout_height="48dp"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <Button
         android:id="@+id/guardar"
@@ -54,10 +54,10 @@
         android:id="@+id/fa"
         android:layout_width="347dp"
         android:layout_height="39dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
@@ -65,10 +65,10 @@
         android:id="@+id/fb"
         android:layout_width="346dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fa" />
 
@@ -76,10 +76,9 @@
         android:id="@+id/ftotal"
         android:layout_width="345dp"
         android:layout_height="37dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fb" />
 
@@ -87,10 +86,9 @@
         android:id="@+id/fpromedio"
         android:layout_width="339dp"
         android:layout_height="40dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ftotal" />
 
@@ -107,13 +105,24 @@
 
     <TextView
         android:id="@+id/fultimo"
-        android:layout_width="345dp"
-        android:layout_height="50dp"
+        android:layout_width="338dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fprimero" />
+
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="333dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fultimo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
