@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             t.setText("MONTO TOTAL :   "+"|| $"+total+"");
             p.setText("PROMEDIO VENTAS :   "+"|| $"+promedio+"");
             r.setText("INGRESADO");
-            Toast.makeText(this, "Su boleta a sido ingresada", Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this, "El Monto debe ser igual o mayor a $190", Toast.LENGTH_LONG).show();
