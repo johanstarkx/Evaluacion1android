@@ -1,45 +1,59 @@
 package com.example.evaluacion1android;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int alto,bajo,total,promedio,primer,ultimo; //recuerda agregar los montos del folio mas alto y mas bajo
-    int falto,fbajo,ftotal,fpromedio,fprimer,fultimo;
+    int alto=0,bajo=0,total=0,promedio=0,primer,ultimo; //recuerda agregar los montos del folio mas alto y mas bajo
+    int falto=0,fbajo,fprimer,fultimo;
     int folio =0;
-    int monto;
-
+    TextView monto;
+    TextView fma,fmb,fmpri,fmult,t,p,r;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         monto = (TextView) findViewById(R.id.fMonto);
-        folimontoalto = (TextView) findViewById(R.id.fmalto);
+        fma = (TextView) findViewById(R.id.fa);
+        fmb = (TextView) findViewById(R.id.fb);
+        t = (TextView) findViewById(R.id.ftotal);
+        p = (TextView) findViewById(R.id.fpromedio);
+        fmpri = (TextView) findViewById(R.id.fprimero);
+        fmult = (TextView) findViewById(R.id.fultimo);
+        r = (TextView) findViewById(R.id.Confirm);
     }
     public void ingreso(View v){
-        folio=folio+1;
         int num;
+        folio=folio+1;
         num = Integer.parseInt(monto.getText().toString());
-        if (num > alto){
-            alto=num;
-            falto=folio;
-            foliomonto.setText();
-        }
-        if (num < bajo){
+        fultimo=folio;
+        ultimo=num;
+        fmult.setText("F"+fultimo+"$"+ultimo);
+        if (bajo==0){
             fbajo=folio;
             bajo=num;
-        }
-        if (folio ==1){
+            fmb.setText("BOLETA MONTO BAJO :   "+"F"+fbajo+"$"+bajo);
             fprimer=folio;
             primer=num;
+            fmpri.setText("BOLETA MONTO BAJO :   "+"F"+fprimer+"$"+primer);
         }
-        if (folio > 1){
-            fultimo=folio;
-            ultimo=num;
+        if (num > alto){
+            falto=folio;
+            alto=num;
+            fma.setText("BOLETA MONTO ALTO :   "+"F"+falto+"$"+alto);
         }
-
-
+        else if (num < bajo){
+            fbajo=folio;
+            bajo=num;
+            fmb.setText("BOLETA MONTO BAJO :   "+"F"+fbajo+"$"+bajo);
+        }
+        total=total+num;
+        promedio=total*fultimo/100;
+        t.setText("MONTO TOTAL :   "+"$"+total+"");
+        p.setText("PROMEDIO VENTAS :   "+"$"+promedio+"");
+        r.setText("Guardado");
 
     }
 }
